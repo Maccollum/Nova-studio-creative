@@ -26,11 +26,16 @@ header p {
   margin: 1rem 0 0 0;
 }
 
+/* Contenedor principal */
+.main-content {
+  padding: 2rem 1rem;
+}
+
 /* Secciones con fondo blanco */
 section {
   padding: 3rem 1.5rem;
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
   background: white;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -171,7 +176,7 @@ footer {
   padding: 2rem 1rem;
   background: #1e293b;
   color: white;
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 footer p {
@@ -181,9 +186,13 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
   section {
     padding: 2rem 1rem;
-    margin: 1rem;
+    margin: 0 auto 1.5rem auto;
   }
   
   .card {
