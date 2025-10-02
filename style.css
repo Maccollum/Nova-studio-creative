@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -9,10 +10,22 @@ body {
 
 /* Header */
 header {
-  background: rgba(11, 61, 145, 0.9);
+  background: rgba(11, 61, 145, 0.95);
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
 }
 
 h1 {
@@ -26,17 +39,12 @@ header p {
   margin: 1rem 0 0 0;
 }
 
-/* Contenedor principal */
-.main-content {
-  padding: 2rem 1rem;
-}
-
 /* Secciones con fondo blanco */
 section {
   padding: 3rem 1.5rem;
   max-width: 1200px;
-  margin: 0 auto 2rem auto;
-  background: white;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -46,6 +54,18 @@ section h2 {
   margin-bottom: 3rem;
   font-size: 2.2rem;
   color: #1e293b;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
 }
 
 /* Grid */
@@ -56,14 +76,26 @@ section h2 {
   padding: 1rem 0;
 }
 
-/* Tarjetas */
+/* Tarjetas modernas pero simples */
 .card {
-  background: #f8fafc;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  border-radius: 12px 12px 0 0;
 }
 
 .card:hover {
@@ -85,7 +117,7 @@ section h2 {
 
 /* Botones */
 .card a {
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
@@ -96,8 +128,8 @@ section h2 {
 }
 
 .card a:hover {
-  background: #1d4ed8;
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
 /* Services */
@@ -155,7 +187,7 @@ input:focus, textarea:focus {
 }
 
 button {
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
   color: white;
   border: none;
   padding: 0.75rem;
@@ -166,17 +198,17 @@ button {
 }
 
 button:hover {
-  background: #1d4ed8;
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background: #1e293b;
+  background: rgba(30, 41, 59, 0.95);
   color: white;
-  margin-top: 0;
+  margin-top: 3rem;
 }
 
 footer p {
@@ -186,13 +218,9 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .main-content {
-    padding: 1rem;
-  }
-  
   section {
     padding: 2rem 1rem;
-    margin: 0 auto 1.5rem auto;
+    margin: 1rem;
   }
   
   .card {
