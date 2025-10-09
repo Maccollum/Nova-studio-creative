@@ -231,3 +231,83 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+
+/* Estilos para redes sociales */
+#social-media {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#social-media h2 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: #1e293b;
+  position: relative;
+}
+
+#social-media h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #475569;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: #2563eb;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .social-link {
+    padding: 1rem;
+    min-width: 80px;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
