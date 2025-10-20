@@ -8,18 +8,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">🌌 Nova Creative Studio</div>
-    <button class="menu-btn" id="menu-btn">☰</button>
-    <nav id="nav-menu" class="nav-menu">
-      <a href="#portfolio">Projects</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- HERO HEADER -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="studio-title">Nova Creative Studio</h1>
+      <div class="photo-circle"></div>
+      <h2 class="author-name">BENJAMIN NTUTUMU</h2>
+    </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="main-content">
     <section id="portfolio">
       <h2>Projects</h2>
@@ -92,7 +91,7 @@
       </form>
     </section>
 
-    <!-- Redes Sociales -->
+    <!-- SOCIAL MEDIA -->
     <section id="social-media">
       <h2>Follow Me on Social Networks</h2>
       <div class="social-links">
@@ -124,6 +123,7 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-center">
       <p>&copy; 2025 Nova Creative Studio</p>
@@ -133,14 +133,5 @@
     </div>
   </footer>
 
-  <script>
-    // Menu toggle (móvil)
-    const menuBtn = document.getElementById("menu-btn");
-    const navMenu = document.getElementById("nav-menu");
-
-    menuBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  </script>
 </body>
 </html>
