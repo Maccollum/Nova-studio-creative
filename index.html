@@ -1,137 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nova Creative Studio</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nova Creative Studio — AI Edition</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Tipografía moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Fondo animado: capas y blobs -->
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="grid-glow"></div>
+  </div>
 
-  <!-- HERO HEADER -->
   <header class="hero">
-    <div class="hero-content">
-      <h1 class="studio-title">Nova Creative Studio</h1>
-      <div class="photo-circle"></div>
-      <h2 class="author-name">BENJAMIN NTUTUMU</h2>
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo-blob" aria-hidden="true"></div>
+        <span class="brand-name">Nova Creative Studio</span>
+      </div>
+      <div class="nav-actions">
+        <a href="#portfolio" class="btn ghost">Proyectos</a>
+        <a href="#contact" class="btn primary">Contactar</a>
+      </div>
+    </nav>
+
+    <div class="hero-inner glass">
+      <div class="profile">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="profile-info">
+          <h1>Benjamin Ntutumu</h1>
+          <p class="subtitle">Graphic/Desktop Apps designer · Translation (EN/FR/ES) · Fullstack Developer · Digital Marketing · Branding</p>
+          <div class="profile-ctas">
+            <a class="btn primary" href="#portfolio">Ver proyectos</a>
+            <a class="btn outline" href="#about">Sobre nosotros</a>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div><strong>37</strong><span>Following</span></div>
+          <div><strong>73.5k</strong><span>Followers</span></div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-    <section id="portfolio">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
+  <main class="container">
+
+    <!-- Portfolio / Projects -->
+    <section id="portfolio" class="section glass-section">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p class="muted">Selección de trabajos — demos en vivo y repositorios</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <article class="card">
           <h3>Google Clone</h3>
           <p>A functional replica of the Google Home page, with search and responsive design.</p>
-          <a href="https://google-cloned-ten.vercel.app/" target="_blank">Live Demo</a>
-        </div>
+          <div class="card-actions">
+            <a href="https://google-cloned-ten.vercel.app/" target="_blank" rel="noopener" class="btn small">Live Demo</a>
+          </div>
+        </article>
 
-        <div class="card">
-          <h3>Web Code Compiler</h3>
-          <p>Supports several programming languages, code history, and input management. Built with Node.js, Docker, and Flask.</p>
-          <a href="https://google-cloned-ten.vercel.app/" target="_blank">Live Demo</a>
-        </div>
+        <!-- Card 2 -->
+        <article class="card">
+          <h3>Web code Compiler</h3>
+          <p>Supports several programming languages, code history, input management. Using sandbox, Node.js + Docker/Python Flask + JS front-end.</p>
+          <div class="card-actions">
+            <a href="https://google-cloned-ten.vercel.app/" target="_blank" rel="noopener" class="btn small">Live Demo</a>
+          </div>
+        </article>
 
-        <div class="card">
+        <!-- Card 3 -->
+        <article class="card">
           <h3>Web Calculator</h3>
           <p>An interactive calculator built using HTML, CSS, and JavaScript.</p>
-          <a href="https://web-calculator.vercel.app" target="_blank">Live Demo</a>
-        </div>
+          <div class="card-actions">
+            <a href="https://web-calculator.vercel.app" target="_blank" rel="noopener" class="btn small">Live Demo</a>
+          </div>
+        </article>
 
-        <div class="card">
+        <!-- Card 4 (fixed the broken link) -->
+        <article class="card">
+          <h3>Personal Portfolio</h3>
+          <p>A personal website showcasing skills, experience, and projects.</p>
+          <div class="card-actions">
+            <a href="https://github.com/tuusuario" target="_blank" rel="noopener" class="btn small">View on GitHub</a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
           <h3>AZAP FOOD DELIVERY</h3>
-          <p>Full-stack food delivery web app connecting users with nearby restaurants. Built with React, Node.js, and MongoDB.</p>
-          <a href="https://github.com/Maccollum/azap-delyvery-app" target="_blank">View on GitHub</a>
-        </div>
+          <p>A full-stack food delivery web application using React, Node.js, Express.js and MongoDB.</p>
+          <div class="card-actions">
+            <a href="https://github.com/Maccollum/azap-delyvery-app" target="_blank" rel="noopener" class="btn small">View on GitHub</a>
+          </div>
+        </article>
 
-        <div class="card">
-          <h3>Mini ATM App</h3>
-          <p>Desktop app with Tkinter and MySQL/CSV integrations. Supports withdrawals, deposits, and balance checks.</p>
-          <a href="https://github.com/Maccollum/mini-atm-machine" target="_blank">View on GitHub</a>
-          <a href="https://youtube.com/shorts/qLn9OAeBsQQ" target="_blank">Watch Demo Video</a>
-        </div>
+        <!-- Card 6 -->
+        <article class="card">
+          <h3>Mini ATM APP</h3>
+          <p>Desktop app using Python (Tkinter), MySQL/CSV integrations: withdrawals, deposits and balance checks.</p>
+          <div class="card-actions">
+            <a href="https://github.com/Maccollum/mini-atm-machine" target="_blank" rel="noopener" class="btn small">View on GitHub</a>
+            <a href="https://youtube.com/shorts/qLn9OAeBsQQ" target="_blank" rel="noopener" class="btn small outline">Watch Demo</a>
+          </div>
+        </article>
 
-        <div class="card">
+        <!-- Card 7 -->
+        <article class="card">
           <h3>Job Recruitment Frontend</h3>
-          <p>Recruitment and job management system developed with modern technologies.</p>
-          <a href="https://github.com/Maccollum/job-reclutment-frontend" target="_blank">View on GitHub</a>
-        </div>
+          <p>Recruitment and job management frontend developed with modern technologies.</p>
+          <div class="card-actions">
+            <a href="https://github.com/Maccollum/job-reclutment-frontend" target="_blank" rel="noopener" class="btn small">View on GitHub</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>We are a young team passionate about design and technology. We create creative solutions that boost your brand.</p>
+    <!-- About -->
+    <section id="about" class="section glass-section">
+      <div class="section-header">
+        <h2>About Us</h2>
+      </div>
+      <p class="lead">We are a young team passionate about design and technology. We create creative solutions that boost your brand.</p>
     </section>
 
-    <section id="services">
-      <h2>Services</h2>
-      <ul>
+    <!-- Services -->
+    <section id="services" class="section glass-section">
+      <div class="section-header">
+        <h2>Services</h2>
+      </div>
+      <ul class="services-list">
         <li>✨ Professional graphic design</li>
         <li>💻 Modern web development</li>
         <li>🎨 Branding and visual strategy</li>
       </ul>
     </section>
 
-    <section id="testimonials">
-      <h2>Testimonials</h2>
-      <blockquote>"Nova transformed our brand image. Excellent work! Happy customer."</blockquote>
+    <!-- Testimonials -->
+    <section id="testimonials" class="section glass-section">
+      <div class="section-header">
+        <h2>Testimonials</h2>
+      </div>
+      <blockquote class="testimonial">"Nova transformed our brand image. Excellent work! — Happy customer."</blockquote>
     </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form action="send.php" method="POST">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" placeholder="Your message" required></textarea>
-        <button type="submit">Submit</button>
+    <!-- Contact -->
+    <section id="contact" class="section glass-section">
+      <div class="section-header">
+        <h2>Contact Us</h2>
+      </div>
+
+      <form action="send.php" method="POST" class="contact-form" novalidate>
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+        <textarea name="message" rows="6" placeholder="Your message" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit</button>
+          <button type="reset" class="btn ghost">Reset</button>
+        </div>
       </form>
+
+      <div class="contact-meta">
+        <p><strong>Email:</strong> <a href="mailto:Benja30mccollum@gmail.com">Benja30mccollum@gmail.com</a></p>
+        <p><strong>Mobile:</strong> <a href="tel:+919205362840">+91 9205362840</a></p>
+      </div>
     </section>
 
-    <!-- SOCIAL MEDIA -->
-    <section id="social-media">
-      <h2>Follow Me on Social Networks</h2>
-      <div class="social-links">
-        <a href="https://github.com/tuusuario" target="_blank" class="social-link">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
-          GitHub
+    <!-- Social / Footer -->
+    <section id="social-media" class="section glass-section small">
+      <h3>Follow me on social networks</h3>
+      <div class="social-grid">
+        <a class="social-card" href="https://github.com/tuusuario" target="_blank" rel="noopener">
+          <div class="icon gh" aria-hidden="true"></div>
+          <span>GitHub</span>
         </a>
-        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="social-link">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
-          LinkedIn
+        <a class="social-card" href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener">
+          <div class="icon li" aria-hidden="true"></div>
+          <span>LinkedIn</span>
         </a>
-        <a href="https://instagram.com/pceudo_designer" target="_blank" class="social-link">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
-          Instagram
+        <a class="social-card" href="https://pinterest.com/tuusuario" target="_blank" rel="noopener">
+          <div class="icon pt" aria-hidden="true"></div>
+          <span>Pinterest</span>
         </a>
-        <a href="https://pinterest.com/tuusuario" target="_blank" class="social-link">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pinterest.svg" alt="Pinterest" />
-          Pinterest
+        <a class="social-card" href="https://instagram.com/pceudo_designer" target="_blank" rel="noopener">
+          <div class="icon ig" aria-hidden="true"></div>
+          <span>Instagram</span>
         </a>
-        <a href="https://facebook.com/tuusuario" target="_blank" class="social-link">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
-          Facebook
-        </a>
-        <a href="https://discord.com/users/tuusuario" target="_blank" class="social-link">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" />
-          Discord
+        <a class="social-card" href="https://facebook.com/tuusuario" target="_blank" rel="noopener">
+          <div class="icon fb" aria-hidden="true"></div>
+          <span>Facebook</span>
         </a>
       </div>
     </section>
+
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-center">
-      <p>&copy; 2025 Nova Creative Studio</p>
-      <p><strong>Benjamin Ntutumu</strong></p>
-      <p>Email: <a href="mailto:Benja30mccollum@gmail.com">Benja30mccollum@gmail.com</a></p>
-      <p>Mobile: <a href="tel:+919205362840">+91 9205362840</a></p>
-    </div>
+  <footer class="site-footer">
+    <p>&copy; 2025 Nova Creative Studio — Benjamin Ntutumu</p>
   </footer>
 
+  <!-- Small JS: reduce-motion respect and optional tiny parallax on blobs -->
+  <script>
+    // Respect prefers-reduced-motion
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) {
+      // Parallax-like blob movement based on mouse (subtle)
+      const b1 = document.querySelector('.b1');
+      const b2 = document.querySelector('.b2');
+      window.addEventListener('mousemove', e => {
+        const x = (e.clientX / window.innerWidth) - 0.5;
+        const y = (e.clientY / window.innerHeight) - 0.5;
+        if (b1) b1.style.transform = `translate(${x * 30}px, ${y * 20}px)`;
+        if (b2) b2.style.transform = `translate(${ -x * 25}px, ${-y * 15}px)`;
+      });
+    }
+  </script>
 </body>
 </html>
